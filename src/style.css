@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@400;600&display=swap');
+
+:root {
+  --bg-base: #fdf6ec;
+  --bg-surface: #fff8f0;
+  --bg-sunken: #f5eadb;
+  --amber-400: #f59e0b;
+  --amber-500: #d97706;
+  --terracotta: #c2714f;
+  --terracotta-light: #e8956f;
+  --text-primary: #3d2b1f;
+  --text-secondary: #8c6a52;
+  --text-muted: #b89a84;
+  --dot-filled: #f59e0b;
+  --dot-missed: #d9b99b;
+  --dot-today: #c2714f;
+  --border-light: #e8d5c0;
+  --border-medium: #c9a98a;
+  --shadow: 0 2px 12px rgba(61, 43, 31, 0.08);
+  --shadow-md: 0 4px 20px rgba(61, 43, 31, 0.12);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+textarea, input {
+  font-family: inherit;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.btn-primary {
+  background: var(--amber-500);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.6rem 1.25rem;
+  border-radius: 10px;
+  transition: background 0.15s, transform 0.1s;
+}
+.btn-primary:hover { background: var(--terracotta); }
+.btn-primary:active { transform: scale(0.97); }
+
+.btn-ghost {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+.btn-ghost:hover { background: var(--bg-sunken); }
+
+.btn-danger {
+  color: #c0392b;
+  font-size: 0.875rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+.btn-danger:hover { background: #fde8e6; }
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
