@@ -1,0 +1,25 @@
+{
+  "name": "30天彼岸计划",
+  "short_name": "彼岸 Beyond30",
+  "description": "你只需要30天的认真，每一天的记录都是在向彼岸靠近一步",
+  "start_url": "/30day-goal-journal/",
+  "scope": "/30day-goal-journal/",
+  "display": "standalone",
+  "background_color": "#fdf6ec",
+  "theme_color": "#c2714f",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/30day-goal-journal/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/30day-goal-journal/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

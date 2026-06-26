@@ -2,12 +2,35 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>我的旅程 · 30天目标</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>30天彼岸计划 · Beyond30</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="/30day-goal-journal/manifest.json" />
+    <meta name="theme-color" content="#c2714f" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="彼岸" />
+    <link rel="apple-touch-icon" href="/30day-goal-journal/icons/icon-192.png" />
+
+    <!-- SEO / share -->
+    <meta name="description" content="你只需要30天的认真，每一天的记录都是在向彼岸靠近一步" />
+    <meta property="og:title" content="30天彼岸计划 · Beyond30" />
+    <meta property="og:description" content="你只需要30天的认真，每一天的记录都是在向彼岸靠近一步" />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" type="image/svg+xml" href="/30day-goal-journal/favicon.svg" />
   </head>
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/30day-goal-journal/sw.js')
+        })
+      }
+    </script>
   </body>
 </html>
