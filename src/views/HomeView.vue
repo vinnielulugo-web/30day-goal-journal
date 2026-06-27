@@ -1,16 +1,18 @@
 <template>
   <div class="home">
     <header class="home-header">
-      <div class="header-content">
+      <div class="header-top">
         <div class="brand-row">
           <h1 class="app-title">30天彼岸计划</h1>
           <span class="brand-en">Beyond 30</span>
         </div>
+        <button class="btn-primary new-btn" @click="showCreate = true">+ 新目标</button>
+      </div>
+      <div class="header-content">
         <p class="app-sub1">你不需要一辈子的坚持，你只需要 <em>30 天</em>的认真</p>
         <p class="app-sub2">每一天的记录，都是在向彼岸靠近一步</p>
         <p class="app-sub2">当 30 天结束时，你会重新认识自己</p>
       </div>
-      <button class="btn-primary new-btn" @click="showCreate = true">+ 新目标</button>
     </header>
 
     <main class="goals-list">
@@ -85,39 +87,55 @@ function doDelete() {
 }
 
 .home-header {
+  padding: 1.5rem 0 1.5rem;
+}
+
+.header-top {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  padding: 2.5rem 0 2rem;
-  gap: 1rem;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .brand-row {
   display: flex;
   align-items: baseline;
-  gap: 0.6rem;
-  margin-bottom: 0.6rem;
+  gap: 0.5rem;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .app-title {
   font-family: 'Lora', Georgia, serif;
-  font-size: 1.6rem;
+  font-size: 1.25rem;
   color: var(--terracotta);
   font-weight: 600;
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 .brand-en {
-  font-size: 0.72rem;
-  letter-spacing: 0.15em;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
   color: var(--text-muted);
   text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.new-btn {
+  flex-shrink: 0;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
 }
 
 .app-sub1 {
-  font-size: 0.88rem;
+  font-size: 0.82rem;
   color: var(--text-primary);
-  margin-bottom: 0.3rem;
   line-height: 1.5;
 }
 
@@ -129,14 +147,9 @@ function doDelete() {
 }
 
 .app-sub2 {
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-.new-btn {
-  flex-shrink: 0;
-  margin-left: 1rem;
+  line-height: 1.5;
 }
 
 .goals-list {

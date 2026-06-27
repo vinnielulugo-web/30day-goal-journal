@@ -14,7 +14,7 @@
         v-model="form.plan"
         class="field-input"
         placeholder="今天打算做什么？"
-        rows="3"
+        rows="2"
         @input="markDirty"
       />
     </div>
@@ -25,7 +25,7 @@
         v-model="form.done"
         class="field-input"
         placeholder="今天完成了什么？"
-        rows="3"
+        rows="2"
         @input="markDirty"
       />
     </div>
@@ -36,7 +36,7 @@
         v-model="form.doBetter"
         class="field-input"
         placeholder="有什么地方可以改进？"
-        rows="3"
+        rows="2"
         @input="markDirty"
       />
     </div>
@@ -150,7 +150,7 @@ function doSave() {
   background: var(--bg-surface);
   border: 1px solid var(--border-light);
   border-radius: 16px;
-  padding: 1.5rem;
+  padding: 1rem 1.25rem;
   box-shadow: var(--shadow);
   animation: fadeIn 0.2s ease;
 }
@@ -159,22 +159,22 @@ function doSave() {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 1.25rem;
-  padding-bottom: 0.9rem;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.7rem;
   border-bottom: 1px solid var(--border-light);
 }
 
 .panel-title {
   font-family: 'Lora', Georgia, serif;
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--text-primary);
   font-weight: 600;
 }
 
 .panel-meta {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--text-secondary);
-  margin-top: 0.2rem;
+  margin-top: 0.15rem;
 }
 
 .future-tag {
@@ -198,14 +198,14 @@ function doSave() {
 }
 
 .field-group {
-  margin-bottom: 1rem;
+  margin-bottom: 0.65rem;
 }
 
 .field-label {
   display: block;
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 500;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
   color: var(--text-secondary);
 }
 
@@ -213,11 +213,11 @@ function doSave() {
   width: 100%;
   background: var(--bg-sunken);
   border: 2px solid transparent;
-  border-radius: 10px;
-  padding: 0.65rem 0.9rem;
+  border-radius: 8px;
+  padding: 0.45rem 0.75rem;
   color: var(--text-primary);
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 0.85rem;
+  line-height: 1.45;
   resize: vertical;
   outline: none;
   transition: border-color 0.2s;
@@ -228,11 +228,11 @@ function doSave() {
 .panel-actions {
   display: flex;
   justify-content: flex-end;
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
 }
 
 .save-btn {
-  min-width: 88px;
+  min-width: 80px;
   transition: background 0.15s, opacity 0.15s;
 }
 .save-btn:disabled {
